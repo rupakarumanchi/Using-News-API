@@ -8,10 +8,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 from logging import DEBUG
 
 app = Flask(__name__)  # create application object
-# app.logger.setLevel(DEBUG)  # to log the user input from the forms (replaced with flash)
 app.config['SECRET_KEY'] = "b'\x92\xa7wF\x0b\x83\xb9\xcf1{\xba\xd4Ky\xa3\xe9 \xd1\x94\xd5\xa7-\xff\x1b'"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'flask_one.db')
-db = SQLAlchemy(app)  # database connection
 
 
 
